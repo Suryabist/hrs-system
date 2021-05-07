@@ -13,9 +13,22 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include, re_path
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('api/v1/', include('hospital.api.v1.urls')),
 ]
+if settings.DEBUG:
+    import debug_toolbar
+    from rest_framework_swagger.views import get_swagger_view
+
+    schema_view = get_swagger_view(title='Hospital Referal API', urlconf='hospital.api.v1.urls', url="/api/v1/")
+    urlpatterns += [path('api/root/', schema_view),
+                    path('', RedirectView.as_view(url='/api/root/', permanent=False)),
+                    re_path(r'^__debug__/', include(debug_toolbar.urls)),
+                    ]
