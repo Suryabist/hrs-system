@@ -4,14 +4,11 @@
     <list default="true" id="dfc1bd19-865c-4395-b2cf-5e7e2885eb7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/core/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/core/api/v1/serializers/hospitals.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/core/api/v1/serializers/hospitals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/core/api/v1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/core/api/v1/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/core/api/v1/views/hospital.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/core/api/v1/views/hospital.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/core/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/core/migrations/0002_normal_bed_available.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/core/migrations/0003_auto_20210504_2211.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/core/migrations/0004_auto_20210504_2213.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/core/migrations/0005_auto_20210506_0639.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/core/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +102,7 @@
       <workItem from="1620164697175" duration="1916000" />
       <workItem from="1620282490566" duration="2962000" />
       <workItem from="1620534473057" duration="10415000" />
-      <workItem from="1620700130586" duration="963000" />
+      <workItem from="1620700130586" duration="4212000" />
     </task>
     <servers />
   </component>

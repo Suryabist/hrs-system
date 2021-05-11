@@ -2,8 +2,8 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
 
 from hospital.core.api.v1.serializers.hospitals import HospitalSerializer, IcuBedSerializers, NormalBedSerializers, \
-    VentilatorsBedSerializers
-from hospital.core.models import hospitals, icu_bed, normal_bed, ventilators
+    VentilatorsBedSerializers, OxygenCylindersSerializers, DeathSerializer, DischargeSerializer
+from hospital.core.models import hospitals, icu_bed, normal_bed, ventilators, OxygenCylinders, death, discharge
 
 
 class hospitalViewSet(viewsets.ModelViewSet):
@@ -26,3 +26,22 @@ class NormalBedViewSet(viewsets.ModelViewSet):
 class VentilatorsBedViewSet(viewsets.ModelViewSet):
     serializer_class = VentilatorsBedSerializers
     queryset = ventilators.objects.all()
+
+
+class OxygenBedViewSet(viewsets.ModelViewSet):
+    serializer_class = OxygenCylindersSerializers
+    queryset = OxygenCylinders.objects.all()
+
+
+class DeathViewSet(viewsets.ModelViewSet):
+    "API to crud the death details"
+    serializer_class = DeathSerializer
+    queryset = death.objects.all()
+
+
+class DischargeViewSet(viewsets.ModelViewSet):
+
+    "API to crud the Discharge details"
+
+    serializer_class = DischargeSerializer
+    queryset = discharge.objects.all()
