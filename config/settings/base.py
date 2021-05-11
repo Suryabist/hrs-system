@@ -33,6 +33,7 @@ BASE_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
+    'django_filters',
     'rest_framework_swagger',
 
 ]
@@ -54,9 +55,13 @@ MIDDLEWARE = [
 ]
 
 
-REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
-
-
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' ,
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
+    'PAGE_SIZE': 10,
+}
 
 ROOT_URLCONF = 'config.urls'
 

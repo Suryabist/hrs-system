@@ -30,6 +30,7 @@ class normal_bed(models.Model):
     capacity = models.IntegerField()
     occupied = models.IntegerField()
     available = models.IntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.hospital.name
@@ -40,6 +41,7 @@ class icu_bed(models.Model):
     capacity = models.IntegerField()
     occupied = models.IntegerField()
     available = models.IntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.hospital.name
@@ -50,6 +52,7 @@ class ventilators(models.Model):
     capacity = models.IntegerField()
     occupied = models.IntegerField()
     available = models.IntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.hospital.name
