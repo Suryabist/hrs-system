@@ -1,9 +1,55 @@
 from django.db import models
 
 
-class location(models.Model):
-    lat = models.DecimalField(decimal_places=5, max_digits=10)
-    long = models.DecimalField(decimal_places=5, max_digits=10)
+class discharge(models.Model):
+    today = models.IntegerField()
+    total = models.IntegerField()
+
+
+class death(models.Model):
+    today = models.IntegerField()
+    total = models.IntegerField()
+
+
+class normal_bed(models.Model):
+    capacity = models.IntegerField()
+    occupied = models.IntegerField()
+    available = models.IntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+class icu_bed(models.Model):
+    capacity = models.IntegerField()
+    occupied = models.IntegerField()
+    available = models.IntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+class ventilators(models.Model):
+    capacity = models.IntegerField()
+    occupied = models.IntegerField()
+    available = models.IntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+class OxygenCylinders(models.Model):
+    capacity = models.IntegerField()
+    occupied = models.IntegerField()
+    available = models.IntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+class HduBeds(models.Model):
+    capacity = models.IntegerField()
+    occupied = models.IntegerField()
+    available = models.IntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+class focalperson(models.Model):
+    name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=250)
+    email = models.EmailField()
 
 
 # Create your models here.
@@ -16,69 +62,17 @@ class hospitals(models.Model):
     address = models.CharField(max_length=250)
     hospital_type = models.CharField(max_length=10, choices=hospital_choice, default="Government")
     phone_no = models.CharField(max_length=125)
-    location = models.ForeignKey(location, on_delete=models.CASCADE, blank=True)
+    images = models.ImageField(upload_to='Images')
+    lat = models.DecimalField(decimal_places=5, max_digits=10)
+    long = models.DecimalField(decimal_places=5, max_digits=10)
+    icu = models.OneToOneField(icu_bed, on_delete=models.CASCADE)
+    normal = models.OneToOneField(normal_bed, on_delete=models.CASCADE)
+    ventilators = models.OneToOneField(ventilators, on_delete=models.CASCADE)
+    oxygen_plant = models.OneToOneField(OxygenCylinders, on_delete=models.CASCADE)
+    discharge = models.OneToOneField(discharge, on_delete=models.CASCADE)
+    death = models.OneToOneField(death, on_delete=models.CASCADE)
+    hdu = models.OneToOneField(HduBeds, on_delete=models.CASCADE)
+    focalperson = models.OneToOneField(focalperson, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
-
-
-class discharge(models.Model):
-    hospital = models.ForeignKey(hospitals, on_delete=models.CASCADE)
-    today = models.IntegerField()
-    total = models.IntegerField()
-
-    def __str__(self):
-        return self.hospital.name
-
-
-class death(models.Model):
-    hospital = models.ForeignKey(hospitals, on_delete=models.CASCADE)
-    today = models.IntegerField()
-    total = models.IntegerField()
-
-    def __str__(self):
-        return self.hospital.name
-
-
-class normal_bed(models.Model):
-    hospital = models.ForeignKey(hospitals, on_delete=models.CASCADE)
-    capacity = models.IntegerField()
-    occupied = models.IntegerField()
-    available = models.IntegerField()
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.hospital.name
-
-
-class icu_bed(models.Model):
-    hospital = models.ForeignKey(hospitals, on_delete=models.CASCADE)
-    capacity = models.IntegerField()
-    occupied = models.IntegerField()
-    available = models.IntegerField()
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.hospital.name
-
-
-class ventilators(models.Model):
-    hospital = models.ForeignKey(hospitals, on_delete=models.CASCADE)
-    capacity = models.IntegerField()
-    occupied = models.IntegerField()
-    available = models.IntegerField()
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.hospital.name
-
-
-class OxygenCylinders(models.Model):
-    hospital = models.ForeignKey(hospitals, on_delete=models.CASCADE)
-    capacity = models.IntegerField()
-    occupied = models.IntegerField()
-    available = models.IntegerField()
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.hospital.name

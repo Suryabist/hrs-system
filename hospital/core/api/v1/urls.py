@@ -1,5 +1,7 @@
 from rest_framework import routers
 
+# from hospital.core.api.v1.views.hospital import hospitalViewSet, IcuBedViewSet, NormalBedViewSet, VentilatorsBedViewSet, \
+#     OxygenBedViewSet, DeathViewSet, DischargeViewSet
 from hospital.core.api.v1.views.hospital import hospitalViewSet, IcuBedViewSet, NormalBedViewSet, VentilatorsBedViewSet, \
     OxygenBedViewSet, DeathViewSet, DischargeViewSet
 

@@ -1,6 +1,10 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
 
+# from hospital.core.api.v1.serializers.hospitals import HospitalSerializer, IcuBedSerializers, NormalBedSerializers, \
+#     VentilatorsBedSerializers, OxygenCylindersSerializers, DeathSerializer, DischargeSerializer
+# from hospital.core.models import hospitals, icu_bed, normal_bed, ventilators, OxygenCylinders, death, discharge
+#
 from hospital.core.api.v1.serializers.hospitals import HospitalSerializer, IcuBedSerializers, NormalBedSerializers, \
     VentilatorsBedSerializers, OxygenCylindersSerializers, DeathSerializer, DischargeSerializer
 from hospital.core.models import hospitals, icu_bed, normal_bed, ventilators, OxygenCylinders, death, discharge
