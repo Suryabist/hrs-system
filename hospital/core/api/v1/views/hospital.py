@@ -14,7 +14,7 @@ class hospitalViewSet(viewsets.ModelViewSet):
     serializer_class = HospitalSerializer
     queryset = hospitals.objects.all()
     filter_backends = (filters.SearchFilter,)
-    search_fields = ['name']
+    search_fields = ['$name']
 
 
 
