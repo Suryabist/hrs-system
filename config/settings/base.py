@@ -40,6 +40,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
   'hospital.core',
+  'hospital.commons',
 ]
 
 INSTALLED_APPS = BASE_APPS + THIRD_PARTY_APPS + LOCAL_APPS
