@@ -26,6 +26,7 @@ class NormalBedSerializers(serializers.ModelSerializer):
     class Meta:
         model = normal_bed
         fields = [
+            'id'
             'capacity',
             'occupied',
             'available'
