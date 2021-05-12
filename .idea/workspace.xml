@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfc1bd19-865c-4395-b2cf-5e7e2885eb7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hospital/commons/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/commons/api/v1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/commons/api/v1/serializers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/commons/api/v1/serializers/contact.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/commons/api/v1/serializers/corona.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/commons/api/v1/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/commons/api/v1/views/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/commons/api/v1/views/contact.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/commons/api/v1/views/corona.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/api/v1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/api/v1/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/core/api/v1/views/hospital.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/core/api/v1/views/hospital.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/core/api/v1/serializers/hospitals.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/core/api/v1/serializers/hospitals.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
