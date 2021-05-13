@@ -1,10 +1,9 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, filters
 
-
 from hospital.core.api.v1.serializers.hospitals import HospitalSerializer, IcuBedSerializers, NormalBedSerializers, \
-    VentilatorsBedSerializers, OxygenCylindersSerializers, DeathSerializer, DischargeSerializer
-from hospital.core.models import hospitals, icu_bed, normal_bed, ventilators, OxygenCylinders, death, discharge
+    VentilatorsBedSerializers, OxygenCylindersSerializers, DeathSerializer, DischargeSerializer, hduBedSerializers
+from hospital.core.models import hospitals, icu_bed, normal_bed, ventilators, OxygenCylinders, death, discharge, HduBeds
 
 
 class hospitalViewSet(viewsets.ModelViewSet):
@@ -12,8 +11,6 @@ class hospitalViewSet(viewsets.ModelViewSet):
     queryset = hospitals.objects.all()
     filter_backends = (filters.SearchFilter,)
     search_fields = ['^name']
-
-
 
 
 class IcuBedViewSet(viewsets.ModelViewSet):
@@ -43,8 +40,12 @@ class DeathViewSet(viewsets.ModelViewSet):
 
 
 class DischargeViewSet(viewsets.ModelViewSet):
-
     "API to crud the Discharge details"
 
     serializer_class = DischargeSerializer
     queryset = discharge.objects.all()
+
+
+class HduBedsViewSet(viewsets.ModelViewSet):
+    serializer_class = hduBedSerializers
+    queryset = HduBeds.objects.all()
