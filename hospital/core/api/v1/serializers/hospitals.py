@@ -29,7 +29,8 @@ class NormalBedSerializers(serializers.ModelSerializer):
             'id',
             'capacity',
             'occupied',
-            'available'
+            'available',
+            'updated_at',
         ]
 
 
