@@ -2,8 +2,10 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, filters
 
 from hospital.core.api.v1.serializers.hospitals import HospitalSerializer, IcuBedSerializers, NormalBedSerializers, \
-    VentilatorsBedSerializers, OxygenCylindersSerializers, DeathSerializer, DischargeSerializer, hduBedSerializers
-from hospital.core.models import hospitals, icu_bed, normal_bed, ventilators, OxygenCylinders, death, discharge, HduBeds
+    VentilatorsBedSerializers, OxygenCylindersSerializers, DeathSerializer, DischargeSerializer, hduBedSerializers, \
+    FocalPersonsSerializers
+from hospital.core.models import hospitals, icu_bed, normal_bed, ventilators, OxygenCylinders, death, discharge, \
+    HduBeds, focalperson
 
 
 class hospitalViewSet(viewsets.ModelViewSet):
@@ -49,3 +51,8 @@ class DischargeViewSet(viewsets.ModelViewSet):
 class HduBedsViewSet(viewsets.ModelViewSet):
     serializer_class = hduBedSerializers
     queryset = HduBeds.objects.all()
+
+
+class FocalPersonViewSet(viewsets.ModelViewSet):
+    serializer_class = FocalPersonsSerializers
+    queryset = focalperson.objects.all()

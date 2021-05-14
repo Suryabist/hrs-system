@@ -14,5 +14,6 @@ router.register('hdubeds', HduBedsViewSet)
 router.register('oxygen', OxygenBedViewSet)
 router.register('death', DeathViewSet)
 router.register('discharge', DischargeViewSet)
+router.register('focalperson', DischargeViewSet)
 
 urlpatterns = router.urls
