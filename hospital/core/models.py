@@ -64,7 +64,7 @@ class hospitals(models.Model):
     address = models.CharField(max_length=250)
     hospital_type = models.CharField(max_length=10, choices=hospital_choice, default="Government")
     phone_no = models.CharField(max_length=125)
-    images = models.ImageField(upload_to='media/images')
+    images = models.ImageField(upload_to='images')
     lat = models.DecimalField(decimal_places=5, max_digits=10)
     long = models.DecimalField(decimal_places=5, max_digits=10)
     icu = models.OneToOneField(icu_bed, on_delete=models.CASCADE)

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfc1bd19-865c-4395-b2cf-5e7e2885eb7a" name="Default Changelist" comment="" />
+    <list default="true" id="dfc1bd19-865c-4395-b2cf-5e7e2885eb7a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Screenshot_20210510-131117.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Screenshot_20210510-131202_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/download.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/commons/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/commons/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/core/models.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,6 +115,7 @@
       <workItem from="1620902522082" duration="1131000" />
       <workItem from="1620910211649" duration="3196000" />
       <workItem from="1620973001420" duration="4001000" />
+      <workItem from="1621069430758" duration="503000" />
     </task>
     <servers />
   </component>
