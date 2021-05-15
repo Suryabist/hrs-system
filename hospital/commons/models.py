@@ -5,6 +5,7 @@ from django.db import models
 class Corona(models.Model):
     tested_sample = models.IntegerField()
     infected = models.IntegerField()
+    total = models.IntegerField()
     recovered = models.IntegerField()
     death = models.IntegerField()
     updated_at = models.DateTimeField(auto_now_add=True)
