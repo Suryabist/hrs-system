@@ -4,13 +4,13 @@ from django.db import models
 class discharge(models.Model):
     today = models.IntegerField()
     total = models.IntegerField()
-    updated_at  = models.IntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
 
 
 class death(models.Model):
     today = models.IntegerField()
     total = models.IntegerField()
-    updated_at = models.IntegerField
+    updated_at = models.DateTimeField(auto_now=True)
 
 
 class normal_bed(models.Model):
