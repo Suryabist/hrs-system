@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfc1bd19-865c-4395-b2cf-5e7e2885eb7a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/hospital/user/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/user/api/v1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/user/api/v1/serializer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/user/api/v1/views/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/user/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hrs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hrs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/commons/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirments.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +59,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -111,7 +120,9 @@
       <workItem from="1620902522082" duration="1131000" />
       <workItem from="1620910211649" duration="3196000" />
       <workItem from="1620973001420" duration="4001000" />
-      <workItem from="1621069430758" duration="5260000" />
+      <workItem from="1621069430758" duration="7568000" />
+      <workItem from="1621331964229" duration="4648000" />
+      <workItem from="1621396864687" duration="599000" />
     </task>
     <servers />
   </component>
