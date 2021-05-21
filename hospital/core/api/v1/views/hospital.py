@@ -10,7 +10,7 @@ from hospital.core.models import hospitals, icu_bed, normal_bed, ventilators, Ox
 
 class hospitalViewSet(viewsets.ModelViewSet):
     serializer_class = HospitalSerializer
-    queryset = hospitals.objects.all()
+    queryset = hospitals.objects.all().order_by('icu__available')
     filter_backends = (filters.SearchFilter,)
     search_fields = ['^name']
 
