@@ -20,27 +20,32 @@ class hospitalViewSet(viewsets.ModelViewSet):
 class IcuBedViewSet(viewsets.ModelViewSet):
     serializer_class = IcuBedSerializers
     queryset = icu_bed.objects.all()
+    permission_classes = [AllowAny]
 
 
 class NormalBedViewSet(viewsets.ModelViewSet):
     serializer_class = NormalBedSerializers
     queryset = normal_bed.objects.all()
+    permission_classes = [AllowAny]
 
 
 class VentilatorsBedViewSet(viewsets.ModelViewSet):
     serializer_class = VentilatorsBedSerializers
     queryset = ventilators.objects.all()
+    permission_classes = [AllowAny]
 
 
 class OxygenBedViewSet(viewsets.ModelViewSet):
     serializer_class = OxygenCylindersSerializers
     queryset = OxygenCylinders.objects.all()
+    permission_classes = [AllowAny]
 
 
 class DeathViewSet(viewsets.ModelViewSet):
     "API to crud the death details"
     serializer_class = DeathSerializer
     queryset = death.objects.all()
+    permission_classes = [AllowAny]
 
 
 class DischargeViewSet(viewsets.ModelViewSet):
@@ -48,14 +53,17 @@ class DischargeViewSet(viewsets.ModelViewSet):
 
     serializer_class = DischargeSerializer
     queryset = discharge.objects.all()
+    permission_classes = [AllowAny]
 
 
 
 class HduBedsViewSet(viewsets.ModelViewSet):
     serializer_class = hduBedSerializers
     queryset = HduBeds.objects.all()
+    permission_classes = [AllowAny]
 
 
 class FocalPersonViewSet(viewsets.ModelViewSet):
     serializer_class = FocalPersonsSerializers
     queryset = focalperson.objects.all()
+    permission_classes = [AllowAny]
