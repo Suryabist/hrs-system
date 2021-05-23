@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="6b7a5236-c227-496a-bce5-ec132dd5b083" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="dfc1bd19-865c-4395-b2cf-5e7e2885eb7a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/authentication/api/v1/serializers/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/serializers/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/authentication/api/v1/views/token.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/views/token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/user/api/v1/views/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/user/api/v1/views/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/user/models.py" afterDir="false" />
+>>>>>>> feature/rbac
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

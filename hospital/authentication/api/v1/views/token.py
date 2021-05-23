@@ -31,6 +31,8 @@ class ObtainAuthTokenView(ObtainAuthToken):
                 {
                     'token': token.key,
                     'available_tokens': AuthToken.objects.filter(user=user).count(),
+                    'admin': user.is_admin,
+                    'hospital': user.is_hospital
                 }
             )
         else:

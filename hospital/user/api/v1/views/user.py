@@ -4,7 +4,6 @@ from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from hospital.commons.mixins.viewset import ListRetrieveUpdateViewSetMixin
 from hospital.user.api.v1.serializer.user import UserSerializer
 
-
 USER = get_user_model()
 
 
@@ -42,5 +41,5 @@ class UserViewSet(ListRetrieveUpdateViewSetMixin):
         kwargs['context'] = self.get_serializer_context()
         if self.action == 'retrieve':
             kwargs['fields'] = ['email', 'first_name', 'last_name', 'password', 'hospital', 'phone_number',
-                           ]
+                                ]
         return serializer_class(*args, **kwargs)
