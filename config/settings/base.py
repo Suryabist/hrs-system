@@ -44,6 +44,7 @@ LOCAL_APPS = [
     'hospital.core',
     'hospital.commons',
     'hospital.user',
+    'hospital.authentication'
 ]
 
 INSTALLED_APPS = BASE_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -63,10 +64,15 @@ MIDDLEWARE = [
 ]
 
 REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'hospital.authentication.auth.CustomTokenAuthentication',
+    ],
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
     'PAGE_SIZE': 10,
 }
 
@@ -126,6 +132,7 @@ USE_L10N = True
 USE_TZ = True
 
 AUTH_USER_MODEL = 'user.User'
+REST_AUTH_TOKEN_MODEL = 'hospital.authentication.models.AuthToken'
 
 
 CORS_ORIGIN_ALLOW_ALL = True  # If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect

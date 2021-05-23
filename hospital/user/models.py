@@ -8,7 +8,7 @@ from django.db import models
 from hospital.user.manager import UserManager
 
 
-class User( AbstractBaseUser, PermissionsMixin):
+class User(AbstractBaseUser, PermissionsMixin):
     username_validator = UnicodeUsernameValidator()
     username = models.UUIDField(
         max_length=150,
