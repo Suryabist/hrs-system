@@ -56,7 +56,6 @@ class DischargeViewSet(viewsets.ModelViewSet):
     permission_classes = [AllowAny]
 
 
-
 class HduBedsViewSet(viewsets.ModelViewSet):
     serializer_class = hduBedSerializers
     queryset = HduBeds.objects.all()

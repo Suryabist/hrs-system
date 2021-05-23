@@ -24,10 +24,12 @@ class User(AbstractBaseUser, PermissionsMixin):
     }, )
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    is_active = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_deleted = models.BooleanField(default=False)
     hospital = models.CharField(max_length=10)
+    is_admin = models.BooleanField(default=False)
+    is_hospital = models.BooleanField(default=False)
     phone_number = models.CharField(max_length=10, null=True, blank=True, unique=True)
     last_activity = models.DateTimeField(null=True, blank=True)
 
