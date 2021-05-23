@@ -19,7 +19,7 @@ class UserRegistrationSerializer(DynamicFieldsModelSerializer):
         # Added this cause phone-end can send empty string in DateField
         # Problem like these must be handled in phone-end
         # handling it in backend is not a good practice
-        for _field in ('date_of_birth', 'phone_number'):
+        for _field in ('hospital', 'phone_number'):
             if data.get(_field) == "":
                 data[_field] = None
         return super().to_internal_value(data)

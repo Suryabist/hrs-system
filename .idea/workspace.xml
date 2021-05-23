@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfc1bd19-865c-4395-b2cf-5e7e2885eb7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hospital/authentication/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/serializers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/serializers/register.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/serializers/token.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/views/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/views/register.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/views/token.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/authentication/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/commons/mixins/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/commons/mixins/viewset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/commons/serializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/user/api/v1/serializer/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/user/api/v1/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/user/api/v1/views/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/api/v1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/api/v1/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/core/api/v1/views/hospital.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/core/api/v1/views/hospital.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/user/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/user/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/authentication/api/v1/serializers/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/serializers/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/authentication/api/v1/views/token.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/views/token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/user/api/v1/views/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/user/api/v1/views/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/user/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
