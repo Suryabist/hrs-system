@@ -8,6 +8,7 @@ from rest_framework import status
 from hospital.authentication.api.v1.serializers.token import CustomAuthTokenSerializer
 from hospital.authentication.auth import CustomTokenAuthentication
 from hospital.authentication.models import AuthToken
+from hospital.core.models import hospitals
 
 
 class ObtainAuthTokenView(ObtainAuthToken):
@@ -19,6 +20,7 @@ class ObtainAuthTokenView(ObtainAuthToken):
                                                context={'request': request})
         if serializer.is_valid():
             user = serializer.validated_data['user']
+            hospital_id = hospitals.objects.get(id=1)
             device_id = self.request.headers.get('Device-ID')
             # if device id is None, null will be set to Authtoken' device_id
             token = AuthToken.objects.create(user=user, device_id=device_id)
@@ -32,7 +34,8 @@ class ObtainAuthTokenView(ObtainAuthToken):
                     'token': token.key,
                     'available_tokens': AuthToken.objects.filter(user=user).count(),
                     'admin': user.is_admin,
-                    'hospital': user.is_hospital
+                    'hospital': user.is_hospital,
+                    'hospital_id': hospital_id
                 }
             )
         else:
