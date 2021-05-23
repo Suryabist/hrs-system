@@ -1,5 +1,6 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, filters
+from rest_framework.permissions import AllowAny
 
 from hospital.core.api.v1.serializers.hospitals import HospitalSerializer, IcuBedSerializers, NormalBedSerializers, \
     VentilatorsBedSerializers, OxygenCylindersSerializers, DeathSerializer, DischargeSerializer, hduBedSerializers, \
@@ -13,6 +14,7 @@ class hospitalViewSet(viewsets.ModelViewSet):
     queryset = hospitals.objects.all().order_by('icu__available')
     filter_backends = (filters.SearchFilter,)
     search_fields = ['^name']
+    permission_classes = [AllowAny]
 
 
 class IcuBedViewSet(viewsets.ModelViewSet):
@@ -46,6 +48,7 @@ class DischargeViewSet(viewsets.ModelViewSet):
 
     serializer_class = DischargeSerializer
     queryset = discharge.objects.all()
+
 
 
 class HduBedsViewSet(viewsets.ModelViewSet):

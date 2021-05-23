@@ -6,6 +6,10 @@ class discharge(models.Model):
     total = models.IntegerField()
     updated_at = models.DateTimeField(auto_now=True)
 
+    def save(self, *args, **kwargs):
+        self.total = self.today + self.total
+        super().save(*args, **kwargs)
+
 
 class death(models.Model):
     today = models.IntegerField()
