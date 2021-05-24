@@ -4,6 +4,8 @@ from rest_framework.authtoken.models import Token as DRFAuthTokenModel
 from django.utils.translation import ugettext_lazy as _
 
 # Create your models here.
+from hospital.core.models import hospitals
+
 USER = get_user_model()
 
 

@@ -8,6 +8,7 @@ from rest_framework import status
 from hospital.authentication.api.v1.serializers.token import CustomAuthTokenSerializer
 from hospital.authentication.auth import CustomTokenAuthentication
 from hospital.authentication.models import AuthToken
+from hospital.core.models import hospitals
 
 
 class ObtainAuthTokenView(ObtainAuthToken):
@@ -26,13 +27,18 @@ class ObtainAuthTokenView(ObtainAuthToken):
             # to determine if it is user's first login
             user.last_login = timezone.now()
             user.save(update_fields=['last_login'])
+            hospital = hospitals.objects.filter(user_id=user.id).first()
 
             return Response(
+
                 {
+
+                    'user': user.id,
                     'token': token.key,
-                    'available_tokens': AuthToken.objects.filter(user=user).count(),
                     'admin': user.is_admin,
-                    'hospital': user.is_hospital
+                    'hospital': user.is_hospital,
+                    'hospital_id': hospital.id if hospital else None
+
                 }
             )
         else:

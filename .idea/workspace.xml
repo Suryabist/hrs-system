@@ -3,10 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="dfc1bd19-865c-4395-b2cf-5e7e2885eb7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/authentication/api/v1/serializers/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/serializers/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/authentication/api/v1/serializers/token.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/serializers/token.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/authentication/api/v1/views/token.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/authentication/api/v1/views/token.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/user/api/v1/views/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/user/api/v1/views/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/authentication/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/authentication/migrations/0002_authtoken_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/authentication/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/authentication/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/core/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/user/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/user/migrations/0002_auto_20210523_1111.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/user/migrations/0003_auto_20210523_1516.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +47,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -118,10 +125,27 @@
       <workItem from="1621331964229" duration="4648000" />
       <workItem from="1621396864687" duration="599000" />
       <workItem from="1621725359288" duration="2853000" />
+      <workItem from="1621880213477" duration="315000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hospital/authentication/api/v1/views/token.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hospital/authentication/api/v1/views/token.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
