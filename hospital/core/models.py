@@ -79,6 +79,7 @@ class hospitals(models.Model):
     death = models.OneToOneField(death, on_delete=models.CASCADE)
     hdu = models.OneToOneField(HduBeds, on_delete=models.CASCADE)
     focalperson = models.OneToOneField(focalperson, on_delete=models.CASCADE)
+    user = models.ForeignKey
 
     def __str__(self):
         return self.name
