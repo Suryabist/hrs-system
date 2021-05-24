@@ -1,4 +1,7 @@
+from django.contrib.auth import get_user_model
 from django.db import models
+
+user = get_user_model()
 
 
 class discharge(models.Model):
@@ -79,7 +82,7 @@ class hospitals(models.Model):
     death = models.OneToOneField(death, on_delete=models.CASCADE)
     hdu = models.OneToOneField(HduBeds, on_delete=models.CASCADE)
     focalperson = models.OneToOneField(focalperson, on_delete=models.CASCADE)
-    user = models.ForeignKey
+    user = models.ForeignKey(user, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name

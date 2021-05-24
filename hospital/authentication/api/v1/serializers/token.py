@@ -1,6 +1,8 @@
 from django.contrib.auth import get_user_model
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 
+from hospital.core.api.v1.serializers.hospitals import HospitalSerializer
+
 
 class CustomAuthTokenSerializer(AuthTokenSerializer):
 
