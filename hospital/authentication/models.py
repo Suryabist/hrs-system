@@ -18,12 +18,12 @@ class AuthToken(DRFAuthTokenModel):
     )
     last_used = models.DateTimeField(null=True, blank=True)
 
-    @classmethod
-    def remove_sessions(cls, user_id, exclude=None):
-        if exclude is None:
-            exclude = []
-        return cls.objects.filter(
-            user_id=user_id
-        ).exclude(
-            key__in=exclude
-        ).delete()
+    # @classmethod
+    # def remove_sessions(cls, user_id, exclude=None):
+    #     if exclude is None:
+    #         exclude = []
+    #     return cls.objects.filter(
+    #         user_id=user_id
+    #     ).exclude(
+    #         key__in=exclude
+    #     ).delete()
