@@ -33,7 +33,7 @@ class ObtainAuthTokenView(ObtainAuthToken):
 
                 {
 
-                    'user': user.id,
+                    'user': user.id if user else None,
                     'token': token.key,
                     'admin': user.is_admin,
                     'hospital': user.is_hospital,
