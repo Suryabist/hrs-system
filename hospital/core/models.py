@@ -72,8 +72,8 @@ class hospitals(models.Model):
     hospital_type = models.CharField(max_length=10, choices=hospital_choice, default="Government")
     phone_no = models.CharField(max_length=125)
     images = models.ImageField(upload_to='images')
-    lat = models.DecimalField(decimal_places=5, max_digits=10)
-    long = models.DecimalField(decimal_places=5, max_digits=10)
+    lat = models.DecimalField(decimal_places=8, max_digits=10)
+    long = models.DecimalField(decimal_places=8, max_digits=10)
     icu = models.OneToOneField(icu_bed, on_delete=models.CASCADE)
     normal = models.OneToOneField(normal_bed, on_delete=models.CASCADE)
     ventilators = models.OneToOneField(ventilators, on_delete=models.CASCADE)
@@ -82,7 +82,7 @@ class hospitals(models.Model):
     death = models.OneToOneField(death, on_delete=models.CASCADE)
     hdu = models.OneToOneField(HduBeds, on_delete=models.CASCADE)
     focalperson = models.OneToOneField(focalperson, on_delete=models.CASCADE)
-    user = models.ForeignKey(user, on_delete=models.CASCADE)
+    user = models.ForeignKey(user, null=True, on_delete=models.CASCADE )
 
     def __str__(self):
         return self.name
