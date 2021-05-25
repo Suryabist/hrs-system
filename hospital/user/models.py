@@ -27,7 +27,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_deleted = models.BooleanField(default=False)
-    hospital = models.CharField(max_length=10)
+    hospital = models.CharField(max_length=256)
     is_admin = models.BooleanField(default=False)
     is_hospital = models.BooleanField(default=False)
     phone_number = models.CharField(max_length=10, null=True, blank=True, unique=True)
