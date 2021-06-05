@@ -19,12 +19,20 @@ class death(models.Model):
     total = models.IntegerField()
     updated_at = models.DateTimeField(auto_now=True)
 
+    def save(self, *args, **kwargs):
+        self.total = self.today + self.total
+        super().save(*args, **kwargs)
+
 
 class normal_bed(models.Model):
     capacity = models.IntegerField()
     occupied = models.IntegerField()
     available = models.IntegerField()
     updated_at = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        self.available = self.capacity - self.occupied
+        super().save(*args, **kwargs)
 
 
 class icu_bed(models.Model):
@@ -33,12 +41,20 @@ class icu_bed(models.Model):
     available = models.IntegerField()
     updated_at = models.DateTimeField(auto_now=True)
 
+    def save(self, *args, **kwargs):
+        self.available = self.capacity - self.occupied
+        super().save(*args, **kwargs)
+
 
 class ventilators(models.Model):
     capacity = models.IntegerField()
     occupied = models.IntegerField()
     available = models.IntegerField()
     updated_at = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        self.available = self.capacity - self.occupied
+        super().save(*args, **kwargs)
 
 
 class OxygenCylinders(models.Model):
@@ -47,12 +63,20 @@ class OxygenCylinders(models.Model):
     available = models.IntegerField()
     updated_at = models.DateTimeField(auto_now=True)
 
+    def save(self, *args, **kwargs):
+        self.available = self.capacity - self.occupied
+        super().save(*args, **kwargs)
+
 
 class HduBeds(models.Model):
     capacity = models.IntegerField()
     occupied = models.IntegerField()
     available = models.IntegerField()
     updated_at = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        self.available = self.capacity - self.occupied
+        super().save(*args, **kwargs)
 
 
 class focalperson(models.Model):
@@ -82,7 +106,7 @@ class hospitals(models.Model):
     death = models.OneToOneField(death, on_delete=models.CASCADE)
     hdu = models.OneToOneField(HduBeds, on_delete=models.CASCADE)
     focalperson = models.OneToOneField(focalperson, on_delete=models.CASCADE)
-    user = models.ForeignKey(user, null=True, on_delete=models.CASCADE )
+    user = models.ForeignKey(user, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
